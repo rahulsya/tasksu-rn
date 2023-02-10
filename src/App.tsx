@@ -1,13 +1,13 @@
-import {View, Text, SafeAreaView} from 'react-native';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 
-const App = (): JSX.Element => {
+import Route from './routes';
+
+const App = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Tasksu app</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Route />
+    </NavigationContainer>
   );
 };
 
