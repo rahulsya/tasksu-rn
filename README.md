@@ -14,5 +14,7 @@ task management apps
 - yarn install 
 - yarn android
 
+issue setup Firebase RN for m1
+https://github.com/invertase/react-native-firebase/issues/6853#issuecomment-1400571275
 
 <img width="391" alt="Screen Shot 2023-02-10 at 22 03 56" src="https://user-images.githubusercontent.com/48597821/218124771-93ba3d2b-213c-48af-9f84-b16c2d2b2ecf.png">
