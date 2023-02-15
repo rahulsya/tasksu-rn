@@ -37,7 +37,7 @@ const steps = [
 ];
 
 const Onboarding = ({navigation, route}: IProps) => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
 
   const onNextStep = () => {
     if (step >= steps.length - 1) return;

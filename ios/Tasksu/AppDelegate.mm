@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import <Firebase.h> // for Firebase
 
 #import <React/RCTBundleURLProvider.h>
 
@@ -6,6 +7,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  if ([FIRApp defaultApp] == nil) { [FIRApp configure]; } // for Firebase
   self.moduleName = @"Tasksu";
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
