@@ -1,0 +1,65 @@
+import {StyleSheet} from 'react-native'
+import { scale } from 'react-native-size-matters'
+import { colors } from './colors'
+
+export const styles=StyleSheet.create({
+    mainContainer:{
+        flex:1,
+        backgroundColor:'white'
+    },
+    container:{
+        flex:1,
+        flexDirection:'column',
+        justifyContent:'space-around',
+        marginHorizontal:scale(16)
+    },
+    skipContainer:{
+        flexDirection:'row',
+        alignItems:'center'
+    },
+    skipText:{
+        paddingLeft:scale(5),
+        fontSize:scale(16),
+        fontWeight:'700',
+        color:colors.netralSemiDark
+    },
+    contentWrapper:{
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    textWrapper:{
+        paddingTop:scale(20)
+    },
+    titleText:{
+        fontSize:scale(24),
+        fontWeight:'700',
+        textAlign:'center'
+    },
+    descText:{
+        paddingTop:scale(4),
+        textAlign:'center',
+        fontWeight:'500'
+    },
+    lastStepContainer:{
+        flexDirection:'column',
+        justifyContent:'space-around'
+    },
+    signinContainer:{
+        paddingVertical:scale(25),
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    signinText:{
+        fontSize:scale(16),
+        fontWeight:'500',
+        color:colors.netralSemiDark
+    },
+    signinTextBtn:{
+        paddingHorizontal:scale(4),
+        color:colors.ascent,
+        fontSize:scale(16),
+        fontWeight:'500',
+    }
+})

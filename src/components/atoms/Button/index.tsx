@@ -13,26 +13,31 @@ import {scale} from 'react-native-size-matters';
 type IPros = {
   buttonText: string;
   onPress?: (e: GestureResponderEvent) => void;
+  iconOnly?:boolean;
+  iconComponent?:JSX.Element
 };
 
-const Button = ({buttonText, onPress}: IPros): JSX.Element => {
+const Button = ({buttonText, onPress,iconOnly,iconComponent}: IPros): JSX.Element => {
+  if (iconOnly) {
+    return (
+      <TouchableOpacity onPress={onPress} style={styles.IconOnlycontainer}>
+        {iconComponent}
+      </TouchableOpacity>
+    );
+  }
+  
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
       <Text style={styles.btnText}>{buttonText}</Text>
     </TouchableOpacity>
   );
-  //   return (
-  //     <TouchableOpacity onPress={()} style={styles.IconOnlycontainer}>
-  //       <Text style={styles.IconOnlybtnText}>+</Text>
-  //     </TouchableOpacity>
-  //   );
+ 
 };
 
 export default Button;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: colors.primary,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -50,12 +55,9 @@ const styles = StyleSheet.create({
     height: scale(44),
     backgroundColor: colors.primary,
     paddingVertical: scale(12),
-    borderRadius: scale(16),
-  },
-  IconOnlybtnText: {
-    fontSize: 16,
-    fontWeight: '500',
-    color: colors.white,
-    textAlign: 'center',
+    borderRadius: scale(44/2),
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center',
   },
 });
